@@ -15,6 +15,29 @@ export interface ButtonProps {
   disabled?: boolean;
 }
 
+export interface Address {
+  state: string;
+  city: string;
+  country: string;
+}
+
+export interface Offers {
+  bed: string;
+  shower: string;
+  occupants: string;
+}
+
+export interface PropertyProps {
+  name: string;
+  address: Address;
+  rating: number;
+  category: string[];
+  price: number;
+  offers: Offers;
+  image: string;
+  discount: string;
+}
+
 export interface Listing {
   id: string;
   title: string;
@@ -22,4 +45,10 @@ export interface Listing {
   price: number;
   rating: number;
   image: string;
+}
+
+export interface PillProps {
+  label: string;
+  isActive?: boolean;
+  onClick?: () => void;
 }
